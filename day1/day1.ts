@@ -6,7 +6,6 @@ const numbers:number[] = input.match(/\d+/g).map(Number);
 let list1: number[] = [];
 let list2: number[] = [];
 
-let sum: number = 0;
 
 for(let i:number = 0; i < numbers.length; i++) {
     if(i % 2 === 0) {
@@ -20,6 +19,7 @@ list1.sort();
 list2.sort();
 
 function part1() {
+    let sum: number = 0;
 
     for(let i:number =0; i< list1.length; i++) {
         sum += Math.abs(list1[i] - list2[i]);
